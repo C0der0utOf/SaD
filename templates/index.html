@@ -5,34 +5,51 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Security Automation Dashboard</h1>
+    <h1>🔐 Security Automation Dashboard</h1>
 
-    <div class="section">
-        <h2>Active Alerts</h2>
-        <div class="alert-list">
-            {% for alert in alerts %}
-            <div class="alert">
-                <span class="badge {{ alert.severity }}">{{ alert.severity }}</span>
-                <strong>{{ alert.type }}</strong><br>
-                {{ alert.description }}<br>
-                <small>{{ alert.timestamp }}</small>
+    <div class="container">
+
+        <!-- Alerts Section -->
+        <section>
+            <h2>Active Alerts</h2>
+            <div class="alert-grid">
+                {% for alert in alerts %}
+                <div class="alert-card">
+                    <div class="alert-header {{ alert.severity }}">
+                        <span>{{ alert.severity }}</span>
+                    </div>
+                    <div class="alert-body">
+                        <h3>{{ alert.type }}</h3>
+                        <p>{{ alert.description }}</p>
+                        <small>{{ alert.timestamp }}</small>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
+        </section>
+
+        <!-- Workflows Section -->
+        <section>
+            <h2>Automation Workflows</h2>
+            <div class="workflow-buttons">
+                {% for workflow_id, workflow in workflows.items() %}
+                <button class="wf-btn" onclick="runWorkflow('{{ workflow_id }}')">
+                    ⚡ {{ workflow.name }}
+                </button>
+                {% endfor %}
+            </div>
+        </section>
+
     </div>
 
-    <div class="section">
-        <h2>Automation Workflows</h2>
-        <div class="workflow-list">
-            {% for workflow_id, workflow in workflows.items() %}
-            <button onclick="runWorkflow('{{ workflow_id }}')">
-                {{ workflow.name }}
-            </button>
-            {% endfor %}
+    <!-- MODAL (hidden until button pressed) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal()" class="close">&times;</span>
+            <h3>Workflow Execution</h3>
+            <div id="modal-body"></div>
         </div>
     </div>
-
-    <pre id="output"></pre>
 
     <script src="/static/dashboard.js"></script>
 </body>

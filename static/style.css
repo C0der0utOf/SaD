@@ -1,42 +1,99 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 40px;
-    background: #f4f6fa;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 20px;
 }
 
 h1 {
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.section {
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
     margin-bottom: 40px;
 }
 
-.alert {
-    background: white;
-    padding: 12px;
-    border-radius: 6px;
-    margin-bottom: 10px;
-    box-shadow: 0 1px 3px #ccc;
+.alert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
 }
 
-.badge {
-    padding: 3px 8px;
-    border-radius: 4px;
-    color: white;
-    font-size: 12px;
+.alert-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.alert-header {
+    padding: 8px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
 }
 
 .High { background: #e74c3c; }
-.Medium { background: #f39c12; }
+.Medium { background: #f1c40f; }
+.Low { background: #3498db; }
 
-button {
-    padding: 10px 16px;
-    margin: 8px;
-    cursor: pointer;
+.alert-body {
+    padding: 15px;
+}
+
+.alert-body h3 {
+    margin-top: 0;
+}
+
+.workflow-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.wf-btn {
+    padding: 12px 18px;
     background: #3a7afe;
     color: white;
     border: none;
     border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.wf-btn:hover {
+    background: #2b63d7;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: #fff;
+    width: 400px;
+    margin: 120px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
 }
 
