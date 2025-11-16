@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f4f6fa;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.alert {
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px #ccc;
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+.High { background: #e74c3c; }
+.Medium { background: #f39c12; }
+
+button {
+    padding: 10px 16px;
+    margin: 8px;
+    cursor: pointer;
+    background: #3a7afe;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+

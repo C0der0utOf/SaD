@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ALERT-101",
+    "type": "Suspicious IP Address",
+    "severity": "High",
+    "description": "Inbound traffic from known malicious IP 194.50.12.3",
+    "timestamp": "2025-01-01T12:00:00Z"
+  },
+  {
+    "id": "ALERT-102",
+    "type": "Phishing Email",
+    "severity": "Medium",
+    "description": "Email reported by employee containing suspicious link",
+    "timestamp": "2025-01-01T12:10:00Z"
+  }
+]
+

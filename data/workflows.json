@@ -1,0 +1,22 @@
+{
+  "block_ip": {
+    "name": "Block Malicious IP",
+    "steps": [
+      "Check threat reputation",
+      "Write firewall rule",
+      "Verify block",
+      "Notify SOC team"
+    ]
+  },
+  "phishing_response": {
+    "name": "Phishing Email Auto-Response",
+    "steps": [
+      "Extract indicators",
+      "Scan URL sandbox",
+      "Disable sender domain",
+      "Notify user",
+      "Update threat intel"
+    ]
+  }
+}
+
