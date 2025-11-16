@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>🔐 Security Automation Dashboard</h1>
+    <h1> Security Automation Dashboard</h1>
 
     <div class="container">
 
@@ -34,7 +34,7 @@
             <div class="workflow-buttons">
                 {% for workflow_id, workflow in workflows.items() %}
                 <button class="wf-btn" onclick="runWorkflow('{{ workflow_id }}')">
-                    ⚡ {{ workflow.name }}
+                     {{ workflow.name }}
                 </button>
                 {% endfor %}
             </div>
