@@ -16,8 +16,17 @@ Perfect for CISOs, Security Engineers, and DevSecOps leaders who want a professi
 - Looks like an enterprise SOC tool
 
 ---
+## How to install and use
+
+### pip
 ```pip install -r requirements.txt
 uvicorn src.app:app --reload
+```
+---
+### uv
+```uv add -r requirements.txt
+uv run uvicorn src.app:app --reload
+
 ```
 
 ##  Architecture Diagram
