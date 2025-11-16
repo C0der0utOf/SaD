@@ -3,8 +3,8 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-from workflow_engine import run_workflow
-from data_store import get_alerts, get_workflows
+from .workflow_engine import run_workflow
+from .data_store import get_alerts, get_workflows
 
 app = FastAPI()
 
