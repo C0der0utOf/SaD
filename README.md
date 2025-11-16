@@ -16,6 +16,9 @@ Perfect for CISOs, Security Engineers, and DevSecOps leaders who want a professi
 - Looks like an enterprise SOC tool
 
 ---
+```pip install -r requirements.txt
+uvicorn src.app:app --reload
+```
 
 ##  Architecture Diagram
 
@@ -26,8 +29,4 @@ flowchart TD
     C --> D[FastAPI Backend]
     D --> E[Workflow Engine]
     E --> F[Execution Log]
-```bash
-pip install -r requirements.txt
-uvicorn src.app:app --reload
 
-```
